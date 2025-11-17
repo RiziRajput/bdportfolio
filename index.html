@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizwan Majeed - Business Development Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.2rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #06b6d4;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15), transparent);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15), transparent);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -200px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50px;
+            color: #60a5fa;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            animation: slideDown 1s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 1s ease 0.2s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #06b6d4;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            animation: fadeIn 1s ease 0.4s both;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+            animation: fadeIn 1s ease 0.6s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 1s ease 0.8s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: -4rem auto 0;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .about-text h3 {
+            color: #06b6d4;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid #3b82f6;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: translateX(10px);
+            border-left-color: #06b6d4;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #3b82f6, #06b6d4);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #06b6d4;
+            border: 3px solid #0f172a;
+        }
+
+        .job-title {
+            color: #06b6d4;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-period {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .job-description {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .job-description li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .job-description li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #06b6d4;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .result-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .result-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .result-title {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .result-description {
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body {
+            padding: 2rem;
+        }
+
+        .project-description {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .tech-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            color: #60a5fa;
+            font-size: 0.9rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(30, 41, 59, 0.6);
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            min-width: 50px;
+        }
+
+        .contact-details h4 {
+            color: #06b6d4;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: #06b6d4;
+        }
+
+        .contact-form {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            color: #fff;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #06b6d4;
+            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #06b6d4;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.3rem;
+        }
+
+        .social-link:hover {
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: #fff;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Rizwan Majeed</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Available for Remote Opportunities</div>
+            <h1>Rizwan Majeed</h1>
+            <h2>Business Development & Sales Professional</h2>
+            <p>Driving revenue growth and securing high-value contracts across international markets. Specialized in B2B SaaS, AI solutions, and remote team collaboration with proven track record of $50K+ project portfolio.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                <a href="#experience" class="btn btn-secondary">View Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-number">$50K+</div>
+            <div class="stat-label">Revenue Generated</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">International Clients</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+    </div>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Transforming Business Opportunities into Success Stories</p>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Your Remote Business Development Partner</h3>
+                <p>With over 2 years of dedicated experience in business development and sales, I specialize in helping companies expand their reach in global markets, particularly across the USA, UK, and Australia.</p>
+                <p>My expertise lies in bridging the gap between innovative solutions and client needs, with a proven track record of securing high-value contracts and maintaining exceptional client satisfaction rates.</p>
+                <p>I combine technical understanding with business acumen to deliver proposals and strategies that resonate with international clients, ensuring seamless project execution from inception to delivery.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">B2B Sales Strategy</div>
+                <div class="skill-item">International Lead Gen</div>
+                <div class="skill-item">Proposal Writing</div>
+                <div class="skill-item">Upwork Bidding</div>
+                <div class="skill-item">Market Research</div>
+                <div class="skill-item">Client Relations</div>
+                <div class="skill-item">Technical Documentation</div>
+                <div class="skill-item">Project Management</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="fade-in">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Building Success Across Global Markets</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 class="job-title">Business Developer</h3>
+                <p class="company-period">Athena AI, Lahore | Jun 2025 - Present</p>
+                <ul class="job-description">
+                    <li>Generated and qualified 50+ high-value leads for AI automation solutions targeting enterprise clients</li>
+                    <li>Negotiated and closed projects worth $50K+ with international clients across USA and UK markets</li>
+                    <li>Conducted comprehensive market research on AI and SaaS trends to drive strategic decision-making</li>
+                    <li>Coordinated with technical teams ensuring 100% on-time delivery and quality compliance</li>
+                    <li>Enhanced client retention by 25% through proactive relationship management and regular follow-ups</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="job-title">Business Development Executive</h3>
+                <p class="company-period">Mavericks United, Lahore | Apr 2025 - Jun 2025</p>
+                <ul class="job-description">
+                    <li>Executed end-to-end client outreach strategies and lead generation campaigns</li>
+                    <li>Converted qualified leads into long-term clients, contributing to 30% growth in client base within two months</li>
+                    <li>Developed and presented compelling proposals aligned with client business objectives</li>
+                    <li>Collaborated cross-functionally to ensure seamless service delivery and client satisfaction</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="job-title">Freelance Business Development Specialist</h3>
+                <p class="company-period">Remote | Nov 2024 - Present</p>
+                <ul class="job-description">
+                    <li>Secured multiple international projects via Upwork across AI, IT, and SaaS domains</li>
+                    <li>Authored technical proposals, SRS documentation, and user manuals for global clients</li>
+                    <li>Maintained 100% client satisfaction rating with consistent repeat business and referrals</li>
+                    <li>Managed 10+ concurrent projects with clients from USA, UK, and Australia</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="job-title">Business Development Intern</h3>
+                <p class="company-period">Australian Client | Remote | Jan 2024 - May 2024</p>
+                <ul class="job-description">
+                    <li>Supported proposal writing, academic research, and technical documentation initiatives</li>
+                    <li>Ensured 100% on-time delivery while maintaining high-quality standards</li>
+                    <li>Contributed to strategic planning and market research for business expansion projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="fade-in">
+        <h2 class="section-title">Key Achievements</h2>
+        <p class="section-subtitle">Delivering Measurable Business Impact</p>
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-icon">💰</div>
+                <h3 class="result-title">$50K+ Revenue Generated</h3>
+                <p class="result-description">Successfully negotiated and closed high-value contracts with international clients, consistently exceeding revenue targets through strategic business development initiatives.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">🌍</div>
+                <h3 class="result-title">10+ International Clients</h3>
+                <p class="result-description">Built and managed a diverse portfolio of clients across USA, UK, and Australia, demonstrating expertise in cross-cultural communication and global market dynamics.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">⭐</div>
+                <h3 class="result-title">100% Client Satisfaction</h3>
+                <p class="result-description">Maintained perfect client satisfaction rating on Upwork with repeat contracts and referrals, showcasing commitment to excellence and relationship management.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">📈</div>
+                <h3 class="result-title">30% Client Base Growth</h3>
+                <p class="result-description">Drove substantial business growth through effective lead generation and conversion strategies, contributing to significant expansion in just two months.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">🎯</div>
+                <h3 class="result-title">50+ Qualified Leads</h3>
+                <p class="result-description">Generated and qualified high-value leads for AI and SaaS solutions, demonstrating expertise in market targeting and client acquisition strategies.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-icon">🏆</div>
+                <h3 class="result-title">25% Retention Increase</h3>
+                <p class="result-description">Enhanced client retention through proactive communication and strategic relationship management, ensuring long-term partnership success.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Innovation Through Technology</p>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">⚖️</div>
+                    <h3 class="project-name">Attorney Assistant</h3>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Final Year Project: Developed an AI-powered legal document summarization platform using NLP and Blockchain technology. Authored comprehensive technical documentation and co-authored research on AI-based case law analysis.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Blockchain</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Technical Documentation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🏙️</div>
+                    <h3 class="project-name">URLC Smart City Project</h3>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Presented innovative smart city solution at Narowal Science Mela (Dec 2023). Recognized for innovation in urban planning and IoT integration for sustainable city development.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Smart Cities</span>
+                        <span class="tech-tag">Innovation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-name">PINTECH EXPO Showcase</h3>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">Selected to showcase AI project at PINTECH EXPO Lahore (Apr 2025) to an international audience. Demonstrated technical innovation and business application of AI solutions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AI Solutions</span>
+                        <span class="tech-tag">Business Innovation</span>
+                        <span class="tech-tag">International Presentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Ready to drive your business growth</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:rizwanmajeed489@gmail.com">rizwanmajeed489@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:+923027837936">+92 302 7837936</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-details">
+                        <h4>LinkedIn</h4>
+                        <a href="#" target="_blank">Connect on LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🌐</div>
+                    <div class="contact-details">
+                        <h4>Upwork</h4>
+                        <a href="#" target="_blank">View Upwork Profile</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p style="color: #cbd5e1;">Lahore, Punjab, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="mailto:rizwanmajeed489@gmail.com" class="social-link">📧</a>
+                <a href="#" class="social-link" target="_blank">💼</a>
+                <a href="#" class="social-link" target="_blank">🌐</a>
+            </div>
+            <p style="color: #64748b;">© 2024 Rizwan Majeed. Available for Remote Opportunities Worldwide.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
